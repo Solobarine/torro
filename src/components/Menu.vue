@@ -4,11 +4,11 @@
             <Chevron />
         </div>
         <div id="menu">
-            <RouterLink to="/dashboard">
+            <RouterLink @click="collapse_menu" to="/dashboard">
                 <Home />
                 <p v-if="!collapsed">Dashboard</p>
             </RouterLink>
-            <RouterLink to="/deposit">
+            <RouterLink @click="collapse_menu" to="/deposit">
                 <History />
                 <p v-if="!collapsed">Deposit</p>
             </RouterLink>
@@ -16,15 +16,15 @@
                 <Message />
                 <p v-if="!collapsed">Messages</p>
             </RouterLink>
-            <RouterLink to="/transfer">
+            <RouterLink @click="collapse_menu" to="/transfer">
                 <History />
                 <p v-if="!collapsed">Transfer</p>
             </RouterLink>
-            <RouterLink to="/wallet">
+            <RouterLink @click="collapse_menu" to="/wallet">
                 <Wallet />
                 <p id="my_wallets" v-if="!collapsed">My Wallets</p>
             </RouterLink>
-            <RouterLink to="/transactions">
+            <RouterLink @click="collapse_menu" to="/transactions">
                 <History />
                 <p v-if="!collapsed">Transactions</p>
             </RouterLink>
@@ -38,7 +38,7 @@
                 <Help />
                 <p id="get_help" v-if="!collapsed">Get Help</p>
             </RouterLink>
-            <RouterLink to="/settings/details">
+            <RouterLink @click="collapse_menu" to="/settings/details">
                 <Setting />
                 <p v-if="!collapsed">Settings</p>
             </RouterLink>
@@ -57,7 +57,7 @@ import Setting from './icons/menu/Setting.vue'
 import Wallet from './icons/menu/Wallet.vue'
 import Logo_one from '../components/icons/finance/logo/Logo_one.vue'
 import Logo_two from '../components/icons/finance/logo/Logo_two.vue'
-import {collapsed, toggleMenu, menu_width} from '../utils'
+import {collapsed, collapse_menu, toggleMenu, menu_width} from '../utils'
 
 export default {
     components: {
@@ -73,7 +73,7 @@ export default {
         Logo_two
     },
     setup() {
-        return { menu_width, toggleMenu, collapsed }
+        return { menu_width, collapse_menu, toggleMenu, collapsed }
     }
 
 }

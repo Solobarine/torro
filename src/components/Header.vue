@@ -5,10 +5,10 @@
            <h2>TORRO</h2>
         </div>
         <div id="nav_items">
-            <a href="#">Blogs</a>
-            <a href="#">Lorem.</a>
-            <a href="#contact_us">Contact Us</a>
-            <a href="#about_us">About Us</a>
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="#">Discover</RouterLink>
+            <RouterLink to="#contact_us">Contact Us</RouterLink>
+            <RouterLink to="#about_us">About Us</RouterLink>
         </div>
         <div v-if="!logged_in" id="links">
             <RouterLink id="register" to="/register">Register</RouterLink>
